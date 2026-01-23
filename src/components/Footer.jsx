@@ -81,7 +81,7 @@ const Footer = () => {
 
       {/* Bottom */}
       <div className="border-t border-slate-700 text-center py-4 text-sm">
-        © {new Date().getFullYear()} ShopFly. All rights reserved.
+        © {new Date().getFullYear()} Brand Star. All rights reserved.
       </div>
     </footer>
   );
