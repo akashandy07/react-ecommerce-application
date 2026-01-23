@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@keyframes rainbow-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animated-border {
+  position: relative;
+  border-radius: 16px;
+  padding: 4px;
+  overflow: hidden;
+}
+
+.animated-border::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: conic-gradient(
+    #ff0080,
+    #ff8c00,
+    #ffd700,
+    #00ffcc,
+    #00bfff,
+    #8a2be2,
+    #ff0080
+  );
+  animation: rainbow-spin 6s linear infinite;
+}
+
+.animated-border::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: white;
+  border-radius: 14px;
+  z-index: 1;
+}
+
+.animated-border > div {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== Animated Yellow Border ===== */
+.animated-yellow-border {
+  position: relative;
+  border-radius: 16px;
+  padding: 2px; /* BORDER THICKNESS */
+  background: linear-gradient(
+    90deg,
+    #facc15,
+    #fde047,
+    #facc15
+  );
+  background-size: 300% 300%;
+  animation: borderMove 3s linear infinite;
+}
+
+.animated-yellow-border::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: white;
+  border-radius: 14px;
+  z-index: 0;
+}
+
+.animated-yellow-border > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
+/* ===============================
+   Yellow Animated Border for Search
+   =============================== */
+.search-animated-border {
+  position: relative;
+  padding: 2px;
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    #facc15,
+    #fde047,
+    #f59e0b,
+    #facc15
+  );
+  background-size: 300% 300%;
+  animation: searchBorderMove 2.5s linear infinite;
+}
+
+.search-animated-border::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #1e293b; /* slate-800 */
+  border-radius: 4px;
+  z-index: 0;
+}
+
+.search-animated-border > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes searchBorderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
