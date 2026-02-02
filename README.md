@@ -25,6 +25,6 @@ npm install
 npm run dev
 
 ## 🔗 Live Demo
-https://react-ecommerce-application-67p4hku4j-akashandy07s-projects.vercel.app/
+react-ecommerce-application-2kcadjod6-akashandy07s-projects.vercel.app
 
 
