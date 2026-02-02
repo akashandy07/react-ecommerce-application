@@ -14,7 +14,7 @@ const Footer = () => {
             Brand Star
           </h2>
           <p className="text-sm leading-relaxed mb-4">
-            ShopFly brings you the latest fashion and essentials with quality
+             Brand Star brings you the latest fashion and essentials with quality
             you can trust.
           </p>
 
