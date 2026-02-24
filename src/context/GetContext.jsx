@@ -1,11 +1,14 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState ,useEffect } from "react";
 
 // 1️⃣ Create Context
 export const CartContext = createContext();
 
 // 2️⃣ Provider Component
 const GetContext = ({ children }) => {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(() => {
+    const savedCart = localStorage.getItem("cart");
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
 
   // ➕ Add to cart
   const addToCart = (product) => {
@@ -52,6 +55,14 @@ const GetContext = ({ children }) => {
   const removeFromCart = (id) => {
     setCart(cart.filter(item => item.id !== id));
   };
+
+  useEffect(()=>{
+    localStorage.setItem("cart",JSON.stringify(cart))
+
+  },[cart])
+
+
+
 
   return (
     <CartContext.Provider

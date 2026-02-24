@@ -22,7 +22,7 @@ const CategoryPage = () => {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-12">
+    <div className="max-w-7xl mx-auto px-6 py-17">
 
       <h1 className="text-3xl font-bold mb-10 capitalize">
         {categoryName} Collection

@@ -24,7 +24,7 @@ const CheckoutPage = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-10">
+    <div className="max-w-7xl mx-auto px-6 py-17 grid md:grid-cols-2 gap-10">
 
       {/* LEFT – CART ITEMS */}
       <div>

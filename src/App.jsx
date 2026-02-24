@@ -10,6 +10,7 @@ import ProductDetails from "./components/ProductDeatils";
 import Categories from "./components/Categories";
 import CheckoutPage from "./components/CheckoutPage";
 import SearchPage from "./pages/SearchPage";
+
 const App = () => {
   return (
 
@@ -18,6 +19,7 @@ const App = () => {
         <NavBar />
 
         <Routes>
+          
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<CardComponent />} />
           <Route path="/ProductData" element={<ProductData />} />

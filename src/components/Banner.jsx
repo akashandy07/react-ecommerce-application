@@ -6,7 +6,7 @@ const Banner = () => {
     <div className="w-full max-w-7xl mx-auto">
 
       {/* Relative wrapper */}
-      <div className="relative h-[580px] overflow-hidden">
+      <div className="relative h-[640px] overflow-hidden">
 
         {/* Image */}
         <img
